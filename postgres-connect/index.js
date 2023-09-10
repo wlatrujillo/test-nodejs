@@ -16,7 +16,8 @@ let cargarDatosDesdeCSV = (rutaArchivo) => {
         .pipe(csv())
         .on('data', async (row) => {
             rows.push(row);
-            process.stdout.write(`Leyendo ${count++} filas \r`);
+            process.stdout.write(`Reading ${count++} rows \r`);
+            console.log('Total records:', rows.length);
         })
         .on('end', () => {
             db.tx(t => {
@@ -40,7 +41,7 @@ let cargarDatosDesdeCSV = (rutaArchivo) => {
                         row.Occupation
                     ]);
                 });
-                console.log('Ejecutando queries...');
+                console.log(`Running ${queries.length} queries...`);
                 return t.batch(queries);
             })
                 .then(data => {

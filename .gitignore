@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+# Custom
+csv-files/
+**/credit_data.csv
+**/bd_config.json

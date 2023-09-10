@@ -1,0 +1,16 @@
+{
+  "name": "csv-file-splitter",
+  "version": "1.0.0",
+  "description": "Read a csv file and split in differents parts of the file",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}
