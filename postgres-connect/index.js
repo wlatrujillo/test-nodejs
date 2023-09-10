@@ -15,31 +15,8 @@ let cargarDatosDesdeCSV = (rutaArchivo) => {
     fs.createReadStream(rutaArchivo)
         .pipe(csv())
         .on('data', async (row) => {
-            try {
-                // Realiza la inserción en la base de datos
-                /*await db.none('INSERT INTO credit_table VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)', [
-                    parseInt(row.Age),
-                    row.Gender,
-                    parseFloat(row.Income),
-                    parseInt(row.CreditScore),
-                    parseInt(row.CreditHistoryLength),
-                    parseInt(row.NumberOfExistingLoans),
-                    parseFloat(row.LoanAmount),
-                    parseInt(row.LoanTenure),
-                    row.ExistingCustomer,
-                    row.State,
-                    row.City,
-                    parseFloat(row.LTVRatio),
-                    row.EmploymentProfile,
-                    parseInt(row.ProfileScore),
-                    row.Occupation
-                ]);*/
-                //console.log('Fila insertada con éxito:', row);
-                rows.push(row);
-                process.stdout.write(`leyendo ${count++} filas \r`);
-            } catch (error) {
-                console.error('Error al leer fila:', error);
-            }
+            rows.push(row);
+            process.stdout.write(`Leyendo ${count++} filas \r`);
         })
         .on('end', () => {
             db.tx(t => {
@@ -81,4 +58,9 @@ let cargarDatosDesdeCSV = (rutaArchivo) => {
 }
 
 // Llama a la función para cargar datos desde el archivo CSV
-cargarDatosDesdeCSV('credit_data.csv');
+if (process.argv[2] && process.argv[2] === '-f') {
+    console.log('Loading Data from:', process.argv[3]);
+    cargarDatosDesdeCSV(process.argv[3]);
+} else {
+    console.error('Flag -f with file name is required example: node index -f data.csv')
+}
