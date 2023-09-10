@@ -1,0 +1,17 @@
+{
+    "name": "postgres-connnect",
+    "version": "1.0.0",
+    "description": "Read csv file and insert into postgres database",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "node solution.test"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "csv-parser": "^3.0.0",
+        "pg-promise": "^11.5.4"
+    }
+}

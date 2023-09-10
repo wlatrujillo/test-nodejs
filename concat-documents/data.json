@@ -1,0 +1,139 @@
+{
+    "result": true,
+    "data": {
+        "applicationId": null,
+        "processInstance": null,
+        "productId": null,
+        "applicantDocuments": [
+            {
+                "applicantId": 14352,
+                "applicantName": "Elvis Tek",
+                "applicantType": "Individual",
+                "documents": [
+                    {
+                        "id": 4704,
+                        "applicationId": 20452,
+                        "productId": "DDA",
+                        "processInstance": 30062,
+                        "documentTypeCode": "GOGL",
+                        "documentType": "Google documents",
+                        "status": null,
+                        "documentInfo": {
+                            "rejectComment": null,
+                            "shouldBeUploadedByBank": null,
+                            "shouldBeVisibleByClient": false,
+                            "source": "folder"
+                        },
+                        "files": [],
+                        "totalFiles": 0,
+                        "data": null,
+                        "isRequired": true
+                    },
+                    {
+                        "id": 4705,
+                        "applicationId": 20452,
+                        "productId": "DDA",
+                        "processInstance": 30062,
+                        "documentTypeCode": "OFAC",
+                        "documentType": "OFAC Verification",
+                        "status": null,
+                        "documentInfo": {
+                            "rejectComment": null,
+                            "shouldBeUploadedByBank": null,
+                            "shouldBeVisibleByClient": false,
+                            "source": "folder"
+                        },
+                        "files": [],
+                        "totalFiles": 0,
+                        "data": null,
+                        "isRequired": true
+                    },
+                    {
+                        "id": 4706,
+                        "applicationId": 20452,
+                        "productId": "DDA",
+                        "processInstance": 30062,
+                        "documentTypeCode": "CHXSYS",
+                        "documentType": "ChexSystems / E-Funds Verification",
+                        "status": null,
+                        "documentInfo": {
+                            "rejectComment": null,
+                            "shouldBeUploadedByBank": null,
+                            "shouldBeVisibleByClient": false,
+                            "source": "folder"
+                        },
+                        "files": [],
+                        "totalFiles": 0,
+                        "data": null,
+                        "isRequired": true
+                    }
+                ]
+            },
+            {
+                "applicantId": 14353,
+                "applicantName": "Elsa Pato",
+                "applicantType": "Individual",
+                "documents": [
+                    {
+                        "id": 4709,
+                        "applicationId": 20452,
+                        "productId": "DDA",
+                        "processInstance": 30062,
+                        "documentTypeCode": "GOGL",
+                        "documentType": "Google documents",
+                        "status": null,
+                        "documentInfo": {
+                            "rejectComment": null,
+                            "shouldBeUploadedByBank": null,
+                            "shouldBeVisibleByClient": false,
+                            "source": "folder"
+                        },
+                        "files": [],
+                        "totalFiles": 0,
+                        "data": null,
+                        "isRequired": true
+                    },
+                    {
+                        "id": 4710,
+                        "applicationId": 20452,
+                        "productId": "DDA",
+                        "processInstance": 30062,
+                        "documentTypeCode": "OFAC",
+                        "documentType": "OFAC Verification",
+                        "status": null,
+                        "documentInfo": {
+                            "rejectComment": null,
+                            "shouldBeUploadedByBank": null,
+                            "shouldBeVisibleByClient": false,
+                            "source": "folder"
+                        },
+                        "files": [],
+                        "totalFiles": 0,
+                        "data": null,
+                        "isRequired": true
+                    },
+                    {
+                        "id": 4711,
+                        "applicationId": 20452,
+                        "productId": "DDA",
+                        "processInstance": 30062,
+                        "documentTypeCode": "CHXSYS",
+                        "documentType": "ChexSystems / E-Funds Verification",
+                        "status": null,
+                        "documentInfo": {
+                            "rejectComment": null,
+                            "shouldBeUploadedByBank": null,
+                            "shouldBeVisibleByClient": false,
+                            "source": "folder"
+                        },
+                        "files": [],
+                        "totalFiles": 0,
+                        "data": null,
+                        "isRequired": true
+                    }
+                ]
+            }
+        ]
+    },
+    "messages": []
+}

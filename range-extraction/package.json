@@ -1,0 +1,13 @@
+{
+  "name": "range-extraction",
+  "version": "1.0.0",
+  "description": "A format for expressing an ordered list of integers is to use a comma separated list of either",
+  "main": "solution.js",
+  "type": "module",
+  "scripts": {
+    "test": "node solution.test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

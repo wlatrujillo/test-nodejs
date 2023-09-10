@@ -1,0 +1,13 @@
+{
+  "name": "strip-comments",
+  "version": "1.0.0",
+  "description": "Complete the solution so that it strips all text that follows any of a set of comment markers passed in. Any whitespace at the end of the line should also be stripped out.",
+  "main": "solution.js",
+  "type": "module",
+  "scripts": {
+    "test": "node solution.test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

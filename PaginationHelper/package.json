@@ -1,0 +1,12 @@
+{
+  "name": "paginationhelper",
+  "version": "1.0.0",
+  "description": "For this exercise you will be strengthening your page-fu mastery. You will complete the PaginationHelper class, which is a utility class helpful for querying paging information related to an array.",
+  "main": "pagination-helper.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

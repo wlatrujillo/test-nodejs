@@ -1,0 +1,13 @@
+{
+  "name": "snail",
+  "version": "1.0.0",
+  "description": "Snail Sort Given an n x n array, return the array elements arranged from outermost elements to the middle element, traveling clockwise.",
+  "main": "snail.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

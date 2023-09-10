@@ -1,0 +1,566 @@
+[
+        {
+          "parameterKey": "ExternalsVPCEndpointIds",
+          "parameterValue": "${externalsVPCEndpointIds}"
+        },
+        {
+          "parameterKey": "ApiGatewayType",
+          "parameterValue": "PRIVATE"
+        },
+        {
+          "parameterKey": "ExecuteAPIVPCEndpointId",
+          "parameterValue": "${${ENVIRONMENT_ID}-BasePlatform:ExecuteAPIVPCEndpointId}"
+        },
+        {
+          "parameterKey": "LogLevel",
+          "parameterValue": "INFO"
+        },
+        {
+          "parameterKey": "Module",
+          "parameterValue": "DemandDeposits"
+        },
+        {
+          "parameterKey": "ParametersStoreCacheExpirationTime",
+          "parameterValue": 120
+        },
+        {
+          "parameterKey": "LambdaAuthorizer",
+          "parameterValue": "auth-authorization-challenge"
+        },
+        {
+          "parameterKey": "Organization",
+          "parameterValue": "RAP"
+        },
+        {
+          "parameterKey": "Version",
+          "parameterValue": "0.1"
+        },
+        {
+          "parameterKey": "EventBridgeEnabled",
+          "parameterValue": "true"
+        },
+        {
+          "parameterKey": "TenantId",
+          "parameterValue": "t1"
+        },
+        {
+          "parameterKey": "ProcessingType",
+          "parameterValue": "ONLINE"
+        },
+        {
+          "parameterKey": "SharedResourcesAccount",
+          "parameterValue": "125277160564"
+        },
+        {
+          "parameterKey": "LogRetentionDays",
+          "parameterValue": "30"
+        },
+        {
+          "parameterKey": "StageMainVersionName",
+          "parameterValue": "v1"
+        },
+        {
+          "parameterKey": "LambdaAliasProduction",
+          "parameterValue": "production"
+        },
+        {
+          "parameterKey": "LambdaAliasBeta",
+          "parameterValue": "beta"
+        },
+        {
+          "parameterKey": "SkipParameterStore",
+          "parameterValue": "false"
+        },
+        {
+          "parameterKey": "DBConnectionExpirationTime",
+          "parameterValue": 720
+        },
+        {
+          "parameterKey": "DashboardName",
+          "parameterValue": "COBISAPICuentasdedepositoalavista"
+        },
+        {
+          "parameterKey": "flagServerParamsV2",
+          "parameterValue": "true"
+        },
+        {
+          "parameterKey": "EnvironmentIdBase",
+          "parameterValue": "${ENVIRONMENT_ID}"
+        },
+        {
+          "parameterKey": "EnvironmentType",
+          "parameterValue": "${${ENVIRONMENT_ID}-BasePlatform:EnvironmentType}"
+        },
+        {
+          "parameterKey": "EnvironmentId",
+          "parameterValue": "${ENVIRONMENT_ID}"
+        },
+        {
+          "parameterKey": "RegionToDeploy",
+          "parameterValue": "${REGION}"
+        },
+        {
+          "parameterKey": "ReplicationConfigurationActivated",
+          "parameterValue": "false"
+        },
+        {
+          "parameterKey": "ReplicationDestinationEnvironmentId",
+          "parameterValue": "${DR_ENVIRONMENT}"
+        },
+        {
+          "parameterKey": "AwsAccountIdToDeploy",
+          "parameterValue": "${AWS_DEFAULT_ACCOUNT}"
+        },
+        {
+          "parameterKey": "UserPoolId",
+          "parameterValue": "${${ENVIRONMENT_ID}-cobis-core-auth:OfficialsUserPoolId}"
+        },
+        {
+          "parameterKey": "ValueApiKey",
+          "parameterValue": "qwertyuioplkjhgfdsaprd2"
+        },
+        {
+          "parameterKey": "SecurityGroupIds",
+          "parameterValue": "${${ENVIRONMENT_ID}-BasePlatform:DemandDepositsBackendSecurityGroupId}"
+        },
+        {
+          "parameterKey": "SubnetIds",
+          "parameterValue": "${${ENVIRONMENT_ID}-BasePlatform:DemandDepositsBackendSubnetIds}"
+        },
+        {
+          "parameterKey": "StageName",
+          "parameterValue": "v1"
+        },
+        {
+          "parameterKey": "LambdaAliasProduction",
+          "parameterValue": "production"
+        },
+        {
+          "parameterKey": "LambdaAliasBeta",
+          "parameterValue": "beta"
+        },
+        {
+          "parameterKey": "StageMainVersionName",
+          "parameterValue": "v1"
+        },
+        {
+          "parameterKey": "SecretName",
+          "parameterValue": "/${ENVIRONMENT_ID}/DemandDepositsAccounts/database/credentials"
+        },
+        {
+          "parameterKey": "DBReading",
+          "parameterValue": "jdbc:mysql://master.database.general.rap.cobiscloud.int:3333/cobis?strictUpdates=false&connectionCollation=utf8_general_ci&sessionVariables=sql_mode=PIPES_AS_CONCAT"
+        },
+        {
+          "parameterKey": "DBProxy",
+          "parameterValue": "jdbc:mysql://master.database.general.rap.cobiscloud.int:3333/cobis?strictUpdates=false&connectionCollation=utf8_general_ci&sessionVariables=sql_mode=PIPES_AS_CONCAT"
+        },
+        {
+          "parameterKey": "EnvironmentIdBaseFront",
+          "parameterValue": "${ENVIRONMENT_ID}"
+        },
+        {
+          "parameterKey": "flagServerParamsV2",
+          "parameterValue": "true"
+        },
+        {
+          "parameterKey": "EcsTaskExecutionRole",
+          "parameterValue": "arn:aws:iam::${AWS_DEFAULT_ACCOUNT}:role/${ENVIRONMENT_ID}-batch-task-execution-role"
+        },
+        {
+          "parameterKey": "AWSBatchServiceRole",
+          "parameterValue": "arn:aws:iam::${AWS_DEFAULT_ACCOUNT}:role/${ENVIRONMENT_ID}-batch-compute-service-role"
+        },
+        {
+          "parameterKey": "Timezone",
+          "parameterValue": "America/Bogota"
+        },
+        {
+          "parameterKey": "skipParameterStore",
+          "parameterValue": "false"
+        },
+        {
+          "parameterKey": "DbTarget",
+          "parameterValue": "master"
+        },
+        {
+          "parameterKey": "EnvironmentIdBaseAutorizer",
+          "parameterValue": "${ENVIRONMENT_ID}"
+        },
+        {
+          "parameterKey": "AllowedDomains",
+          "parameterValue": "https://visor.product.cobiscloud.com,https://api.visor.product.cobiscloud.com"
+        },
+        {
+          "parameterKey": "BaseUrlRestRule",
+          "parameterValue": "http://internal-prd2-gp-private-load-balancer-1238789951.us-west-2.elb.amazonaws.com:8086/cobis/xsell/business-rules"
+        },
+        {
+          "parameterKey": "SecretsManagerCacheExpirationTime",
+          "parameterValue": "120"
+        },
+        {
+          "parameterKey": "WithWebACL",
+          "parameterValue": "true"
+        },
+        {
+          "parameterKey": "WebACLArn",
+          "parameterValue": "arn:aws:wafv2:us-west-2:418597640713:regional/webacl/prd-gen-gp-oper-product-waf-apis/3d87de6e-c610-4910-89c5-83de1566174f"
+        },
+        {
+          "parameterKey": "LoggingBucket",
+          "parameterValue": "${ENVIRONMENT_ID}-baseplatform-serveraccesslogs-${AWS_DEFAULT_ACCOUNT}"
+        },
+        {
+          "parameterKey": "LoggingLevel",
+          "parameterValue": "INFO"
+        },
+        {
+          "parameterKey": "DemandDepositsExecutorConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsAdjustmentPSTLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsDebitNotesPSTLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsCreditNotesPSTLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsBalancesGETByIdLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:INFO:19"
+        },
+        {
+          "parameterKey": "DemandDepositsPSTLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsGETByIdLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsLastMovementsGETByIdLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsMovementsGETByIdLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsAcumulatedMovementsGETByIdLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsTaxOnFinancialTransactionsPTCLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsTaxOnFinancialTransactionsPSTLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsTaxOnFinancialTransactionsGETByAccountIdLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsTaxOnFinancialTransactionsGETAllLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsTaxOnFinancialTransactionsSimulationsGETLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFreezingMovementsDELLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFreezingMovementsGETAllLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFreezingMovementsPSTLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFrozenBalancesDELLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFrozenBalancesGETAllLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFrozenBalancesPSTLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFrozenBalancesPTCLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsClosuresPSTLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsClosuresPTCLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsAccountsSubtypesPTCLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsAccountsSubtypesGETAllLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsGETByCustomerIdLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsGETByExternalCodeLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsPTCLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsCreditNotesPSTByNumberLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsCreditNotesPSTByExternalCodeLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsDebitNotesPSTByNumberLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsDebitNotesPSTByExternalCodeLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsTransfersPSTLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsTransfersPSTByExternalCodeLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsTransfersPSTByNumberLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsAdjustmentPSTWithAdditionalCostsLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsCreditNotesPSTWithAdditionalCostsLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsDebitNotesPSTWithAdditionalCostsLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsExecutorPublishEventTimeoutMs",
+          "parameterValue": 200
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsGenericV1PublishEventTimeoutMs",
+          "parameterValue": 200
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsGenericV2PublishEventTimeoutMs",
+          "parameterValue": 200
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsBalancesV1PublishEventTimeoutMs",
+          "parameterValue": 200
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsBalancesV2PublishEventTimeoutMs",
+          "parameterValue": 200
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsFreezingV1PublishEventTimeoutMs",
+          "parameterValue": 200
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsFreezingV2PublishEventTimeoutMs",
+          "parameterValue": 200
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsFinancialTransactionV1PublishEventTimeoutMs",
+          "parameterValue": 200
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsFinancialTransactionV2PublishEventTimeoutMs",
+          "parameterValue": 200
+        },
+        {
+          "parameterKey": "DemandDepositsAccountsSubtypesGETAllv2LambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsAccountsSubtypesPTCByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsAccumulatedMovementsPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsAdjustmentPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsAdjustmentPSTWithAdditionalCostsByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsBalancesPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:INFO:19"
+        },
+        {
+          "parameterKey": "DemandDepositsClosuresPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsClosuresPTCByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsCreditNotesPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsCreditNotesPSTWithAdditionalCostsByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsDebitNotesPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsDebitNotesPSTWithAdditionalCostsByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "DemandDepositsFreezingMovementsDELByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFreezingMovementsPSTAllByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFreezingMovementsPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFrozenBalancesDELByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFrozenBalancesPSTAllByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFrozenBalancesPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsFrozenBalancesPTCByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsGETByCustomerIdv2LambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsGETByIdLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsLastMovementsPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsMovementsPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsPSTByIdentifierv2LambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsPSTv2LambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsPTCByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsTaxOnFinancialTransactionsGETAllv2LambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsTaxOnFinancialTransactionsGETByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsTaxOnFinancialTransactionsPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsTaxOnFinancialTransactionsPTCByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsTaxOnFinancialTransactionsSimulationsPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:19"
+        },
+        {
+          "parameterKey": "DemandDepositsTransfersPSTByIdentifierLambdaConfiguration",
+          "parameterValue": "1024:0:0:0:0:0:DEBUG:2"
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsExecutorParameterCacheTTL",
+          "parameterValue": 3600
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsGenericParameterCacheTTL",
+          "parameterValue": 3600
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsBalancesParameterCacheTTL",
+          "parameterValue": 3600
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsTransactionalParameterCacheTTL",
+          "parameterValue": 3600
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsFreezingParameterCacheTTL",
+          "parameterValue": 3600
+        },
+        {
+          "parameterKey": "LambdaDemandDepositsFinancialTransactionParameterCacheTTL",
+          "parameterValue": 3600
+        }
+      ]
