@@ -3,10 +3,7 @@ import readline from 'readline';
 import events from 'events';
 
 
-let splitCsv = async (rutaArchivo, size, hasHeader) => {
-
-    let hasHeader = hasHeader || true;
-    let size = size || 10000;
+let splitCsv = async (rutaArchivo, size = 50000, hasHeader = true) => {
 
     if (size <= 0) {
         console.log('El tamaño debe ser mayor a 0');
@@ -40,7 +37,7 @@ let splitCsv = async (rutaArchivo, size, hasHeader) => {
             }
 
             if (rowCount % size === 0) {
-                console.log('Creating new file');
+                console.log('Creating new file', `file_${fileCount}.csv`);
                 fileCount++;
                 fs.openSync(`./csv-files/file_${fileCount}.csv`, 'w');
                 if (hasHeader) {
@@ -52,6 +49,8 @@ let splitCsv = async (rutaArchivo, size, hasHeader) => {
 
             fs.appendFileSync(`./csv-files/file_${fileCount}.csv`, `${line}\n`);
             rowCount++;
+
+            process.stdout.write(`Processing ${rowCount} rows \r`);
         });
 
         await events.once(rl, 'close');
@@ -66,7 +65,7 @@ let splitCsv = async (rutaArchivo, size, hasHeader) => {
 
 if (process.argv[2] && process.argv[2] === '-f') {
     console.log('Reading file:', process.argv[3]);
-    let size = 10000;
+    let size = 50000;
     let hasHeader = true;
     splitCsv(process.argv[3], size, hasHeader);
 } else {
