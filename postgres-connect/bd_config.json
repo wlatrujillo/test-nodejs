@@ -1,8 +1,8 @@
 {
-    "user": "ttxzncgq",
-    "password": "brN59qWLUOA2_QzJnfg5eNBn0UWoFoI6",
-    "host": "isilo.db.elephantsql.com",
+    "user": "user",
+    "password": "your password",
+    "host": "your host",
     "port": 5432,
-    "database": "ttxzncgq",
+    "database": "your database",
     "max": 5
 }
