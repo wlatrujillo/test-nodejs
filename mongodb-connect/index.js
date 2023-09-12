@@ -10,8 +10,8 @@ const uri = process.env.uri
 const COLLECTION_NAME = 'credit_collection';
 const DB_NAME = 'db_eig';
 
-const PARALLEL_EXECUTIONS = 5;
-const PARALLEL_EXECUTION_CHUNK = 20_000;
+const PARALLEL_EXECUTIONS = 6;
+const PARALLEL_EXECUTION_CHUNK = 50_000;
 
 
 let chunk = (arr, chunkSize) => {
