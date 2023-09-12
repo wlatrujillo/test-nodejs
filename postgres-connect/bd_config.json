@@ -1,8 +1,0 @@
-{
-    "user": "user",
-    "password": "your password",
-    "host": "your host",
-    "port": 5432,
-    "database": "your database",
-    "max": 5
-}

@@ -133,4 +133,3 @@ dist
 # Custom
 csv-files/
 **/credit_data.csv
-**/bd_config.json
