@@ -71,14 +71,18 @@ let loadDataFromCsv = (csvFile) => {
             { table: 'credit_table' }
         );
 
+        const chunks = chunk(rows, CHUNK_SIZE);
 
-        // generating a multi-row insert query:
-        console.log('Creando query with', rows.length, 'records');
-        const query = pgp.helpers.insert(rows, cs);
+        console.log('Iterating over', chunks.length, 'chunks');
+        for (let chunk of chunks) {
+            // generating a multi-row insert query:
+            console.log('Loading query with', chunk.length, 'records');
+            const query = pgp.helpers.insert(chunk, cs);
 
-        console.log('Running query...');
-        await db.none(query);
-        console.log('Proceso completado.');
+            console.log('Running query...');
+            await db.none(query);
+            console.log('Proceso completado.');
+        }
         pgp.end(); // Cierra la conexión a la base de datos cuando haya terminado.
     });
 
