@@ -14,6 +14,26 @@ const PARALLEL_EXECUTIONS = 6;
 const PARALLEL_EXECUTION_CHUNK = 50_000;
 
 
+let parseRow = (row) => {
+    return {
+        age: parseInt(row.Age),
+        gender: row.Gender,
+        annual_income: parseFloat(row.Income),
+        credit_score: parseInt(row.CreditScore),
+        credit_history_length: parseInt(row.CreditHistoryLength),
+        loans_count: parseInt(row.NumberOfExistingLoans),
+        loan_amount: parseFloat(row.LoanAmount),
+        loan_tenure: parseInt(row.LoanTenure),
+        is_customer: row.ExistingCustomer,
+        state: row.State,
+        city: row.City,
+        ltv: parseFloat(row.LTVRatio),
+        employment_profile: row.EmploymentProfile,
+        profile_score: parseInt(row.ProfileScore),
+        occupation: row.Occupation
+    }
+}
+
 let chunk = (arr, chunkSize) => {
     const res = [];
     while (arr.length > 0) {
@@ -41,27 +61,7 @@ let readDataFromCSV = async (csvFile) => {
 
     pipeline.on('data', (row) => {
         process.stdout.write(`Reading ${rowCount++} rows \r`)
-
-        data.push({
-            age: parseInt(row.Age),
-            gender: row.Gender,
-            annual_income: parseFloat(row.Income),
-            credit_score: parseInt(row.CreditScore),
-            credit_history_length: parseInt(row.CreditHistoryLength),
-            loans_count: parseInt(row.NumberOfExistingLoans),
-            loan_amount: parseFloat(row.LoanAmount),
-            loan_tenure: parseInt(row.LoanTenure),
-            is_customer: row.ExistingCustomer,
-            state: row.State,
-            city: row.City,
-            ltv: parseFloat(row.LTVRatio),
-            employment_profile: row.EmploymentProfile,
-            profile_score: parseInt(row.ProfileScore),
-            occupation: row.Occupation
-        });
-
-
-
+        data.push(parseRow(row));
     });
 
     pipeline.on('end', async () => {
