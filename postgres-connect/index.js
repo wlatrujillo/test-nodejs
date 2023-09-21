@@ -32,16 +32,16 @@ let parseRow = (row) => {
     return {
         age: parseInt(row.Age),
         gender: row.Gender,
-        annual_income: parseFloat(row.Income),
+        income: parseFloat(row.Income),
         credit_score: parseInt(row.CreditScore),
         credit_history_length: parseInt(row.CreditHistoryLength),
-        loans_count: parseInt(row.NumberOfExistingLoans),
+        number_of_existing_loans: parseInt(row.NumberOfExistingLoans),
         loan_amount: parseFloat(row.LoanAmount),
         loan_tenure: parseInt(row.LoanTenure),
-        is_customer: row.ExistingCustomer,
+        existing_customer: row.ExistingCustomer,
         state: row.State,
         city: row.City,
-        ltv: parseFloat(row.LTVRatio),
+        ltv_ratio: parseFloat(row.LTVRatio),
         employment_profile: row.EmploymentProfile,
         profile_score: parseInt(row.ProfileScore),
         occupation: row.Occupation
@@ -67,10 +67,10 @@ let loadDataFromCsv = (csvFile) => {
         // our set of columns, to be created only once (statically), and then reused,
         // to let it cache up its formatting templates for high performance:
         const cs = new pgp.helpers.ColumnSet(
-            ['age', 'gender', 'annual_income',
-                'credit_score', 'credit_history_length', 'loans_count',
-                'loan_amount', 'loan_tenure', 'is_customer',
-                'state', 'city', 'ltv',
+            ['age', 'gender', 'income',
+                'credit_score', 'credit_history_length', 'number_of_existing_loans',
+                'loan_amount', 'loan_tenure', 'existing_customer',
+                'state', 'city', 'ltv_ratio',
                 'employment_profile', 'profile_score', 'occupation'],
             { table: 'credit_table' }
         );
