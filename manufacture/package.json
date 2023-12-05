@@ -1,0 +1,13 @@
+{
+    "name": "manufacture",
+    "version": "1.0.0",
+    "description": "Manufacture challagenge",
+    "main": "manufacture.js",
+    "type": "module",
+    "scripts": {
+        "test": "node manufacture.test"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
