@@ -1,0 +1,14 @@
+{
+    "name": "find-first-repeated",
+    "version": "1.0.0",
+    "description": "Find the first repeated word in a list of elements",
+    "main": "solution.js",
+    "type": "module",
+    "scripts": {
+      "test": "node solution.test"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+  
