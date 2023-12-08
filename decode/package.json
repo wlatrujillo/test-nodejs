@@ -1,0 +1,13 @@
+{
+    "name": "decode",
+    "version": "1.0.0",
+    "description": "Decode message",
+    "main": "decode.js",
+    "type": "module",
+    "scripts": {
+      "test": "node decode.test"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
