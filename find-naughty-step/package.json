@@ -1,0 +1,14 @@
+{
+    "name": "find-naughty-step",
+    "version": "1.0.0",
+    "description": "Find the naughty step in a list of steps",
+    "main": "solution.js",
+    "type": "module",
+    "scripts": {
+      "test": "node solution.test"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+  
