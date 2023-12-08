@@ -1,0 +1,13 @@
+{
+    "name": "cyber-reindeer",
+    "version": "1.0.0",
+    "description": "CyberReindeer",
+    "main": "cyber-reindeer.js",
+    "type": "module",
+    "scripts": {
+      "test": "node cyber-reindeer.test"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
