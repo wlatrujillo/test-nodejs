@@ -1,0 +1,13 @@
+{
+    "name": "max-distance",
+    "version": "1.0.0",
+    "description": "Max distance",
+    "main": "max-distance.js",
+    "type": "module",
+    "scripts": {
+      "test": "node max-distance.test"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
