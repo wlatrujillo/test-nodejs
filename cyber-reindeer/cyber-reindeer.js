@@ -15,9 +15,17 @@ export function cyberReindeer(road, time) {
     let result = [];
     let roadSlead = new String(road);
 
+    let index = 0;
     for (let i = 0; i < time; i++) {
-        if (road[i] != barrier) {
-            roadSlead = replaceCharacter(road, i, santaSled);
+        if(i == 1) {
+            road = road.replace(santaSled, roadSign);
+        }
+        if (i == 5) {
+            road = road.replaceAll(barrier, openBarrier);
+        }
+        if (road[index] != barrier) {
+            roadSlead = replaceCharacter(road, index, santaSled);
+            index++;
         }
         result.push(roadSlead)
     }
