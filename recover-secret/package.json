@@ -1,0 +1,12 @@
+{
+    "name": "recover-secret",
+    "version": "1.0.0",
+    "description": "Recover secret string from triplets of strings",
+    "main": "recover-secret.js",
+    "scripts": {
+        "test": "node recover-secret.test"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

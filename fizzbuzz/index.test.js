@@ -1,5 +1,6 @@
 const {describe, it} = require('node:test');
-const assert = require('node:assert');
+const  assert  = require('node:assert');
+
 const { fizzbuzz } = require('./index');
 
 describe('Tests', () => {
