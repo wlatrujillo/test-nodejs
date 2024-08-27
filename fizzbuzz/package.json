@@ -1,0 +1,13 @@
+
+{
+    "name": "fizzbuzz",
+    "version": "1.0.0",
+    "description": "If the input number is divisible by 3 and 5 return FizzBuzz if only divisible by 3 return Fizz if only divisible by 5 return Buzz else return the number itself",
+    "main": "index.js",
+    "scripts": {
+      "test": "node index.test"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
