@@ -8,7 +8,7 @@ describe('parseIntReloaded', () => {
     it('should return 0', () => {
         assert.strictEqual(parseIntReloaded('zero'), 0);
     });
-    
+
     it('should return 20', () => {
         assert.strictEqual(parseIntReloaded('twenty'), 20);
     });
