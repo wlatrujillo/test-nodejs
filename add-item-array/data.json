@@ -1,0 +1,1060 @@
+{
+  "%jobTable%": [
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.endofday.b4492.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4492"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4492"
+          },
+          "jobName": {
+            "S": "LLENAR UNIVERSO CONTA"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.depurationhistorical.b4491.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": true
+              },
+              "exportFilesList": {
+                "L": [
+                  {
+                    "M": {
+                      "exportFile": {
+                        "M": {
+                          "path": {
+                            "S": "replication/DDACCOUNTS/Cuentas/4491/"
+                          },
+                          "database": {
+                            "S": "cob_ahorros"
+                          },
+                          "formatOptions": {
+                            "M": {
+                              "writeHeader": {
+                                "BOOL": true
+                              }
+                            }
+                          },
+                          "name": {
+                            "S": "backup_his_errores_${CLOSURE_DATE:0:4}${CLOSURE_DATE:5:7}${CLOSURE_DATE:8:10}_${SYSTEM_TIMESTAMP:11:13}${SYSTEM_TIMESTAMP:14:16}"
+                          },
+                          "table": {
+                            "S": "rep_ERROR_LOG"
+                          },
+                          "type": {
+                            "S": "txt"
+                          }
+                        }
+                      },
+                      "outputFileDirectory": {
+                        "S": "s3://%environmentId%-integrations-%tenantId%-batch-outputfiledirectory-%accountId%"
+                      }
+                    }
+                  }
+                ]
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4491"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4491"
+          },
+          "jobName": {
+            "S": "DEPURACION DE HISTORICOS DE LOG DE ERRORES"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.depurationhistorical.b4493.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": true
+              },
+              "exportFilesList": {
+                "L": [
+                  {
+                    "M": {
+                      "exportFile": {
+                        "M": {
+                          "path": {
+                            "S": "replication/DDACCOUNTS/Cuentas/4493/"
+                          },
+                          "database": {
+                            "S": "cob_remesas"
+                          },
+                          "formatOptions": {
+                            "M": {
+                              "writeHeader": {
+                                "BOOL": true
+                              }
+                            }
+                          },
+                          "name": {
+                            "S": "backup_his_trn_contable_${CLOSURE_DATE:0:4}${CLOSURE_DATE:5:7}${CLOSURE_DATE:8:10}_${SYSTEM_TIMESTAMP:11:13}${SYSTEM_TIMESTAMP:14:16}"
+                          },
+                          "table": {
+                            "S": "rep_TRN_CONTABLE"
+                          },
+                          "type": {
+                            "S": "txt"
+                          }
+                        }
+                      },
+                      "outputFileDirectory": {
+                        "S": "s3://%environmentId%-integrations-%tenantId%-batch-outputfiledirectory-%accountId%"
+                      }
+                    }
+                  }
+                ]
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4493"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4493"
+          },
+          "jobName": {
+            "S": "DEPURACION DE HISTORICOS DE TRANSACCIONES CONTABILIZADAS"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.endofdayreports.b4494.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": true
+              },
+              "exportFilesList": {
+                "L": [
+                  {
+                    "M": {
+                      "exportFile": {
+                        "M": {
+                          "database": {
+                            "S": "cob_ahorros"
+                          },
+                          "formatOptions": {
+                            "M": {
+                              "writeHeader": {
+                                "BOOL": true
+                              }
+                            }
+                          },
+                          "name": {
+                            "S": "RepBolsillos_${CLOSURE_DATE:0:4}${CLOSURE_DATE:5:7}${CLOSURE_DATE:8:10}_${SYSTEM_TIMESTAMP:11:13}${SYSTEM_TIMESTAMP:14:16}"
+                          },
+                          "table": {
+                            "S": "ah_bolsillo_tmp"
+                          },
+                          "type": {
+                            "S": "csv"
+                          }
+                        }
+                      },
+                      "outputFileDirectory": {
+                        "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-outputfiledirectory-%accountId%"
+                      }
+                    }
+                  },
+                  {
+                    "M": {
+                      "exportFile": {
+                        "M": {
+                          "database": {
+                            "S": "cob_ahorros"
+                          },
+                          "formatOptions": {
+                            "M": {
+                              "writeHeader": {
+                                "BOOL": true
+                              }
+                            }
+                          },
+                          "name": {
+                            "S": "RepBolsillosDet_${CLOSURE_DATE:0:4}${CLOSURE_DATE:5:7}${CLOSURE_DATE:8:10}_${SYSTEM_TIMESTAMP:11:13}${SYSTEM_TIMESTAMP:14:16}"
+                          },
+                          "table": {
+                            "S": "ah_det_bolsillo_tmp"
+                          },
+                          "type": {
+                            "S": "csv"
+                          }
+                        }
+                      },
+                      "outputFileDirectory": {
+                        "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-outputfiledirectory-%accountId%"
+                      }
+                    }
+                  }
+                ]
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4494"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4494"
+          },
+          "jobName": {
+            "S": "REPORTE DE BOLSILLOS VIGENTES CABECERA/DETALLE"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.prebatch.b4203.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4203"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4203"
+          },
+          "jobName": {
+            "S": "CIERRE MASIVO DEL CERTIFICADO DE APORTACIÓN"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.checkbooksgeneration.b4495.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4495"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4495"
+          },
+          "jobName": {
+            "S": "LLENAR UNIVERSO SOLICITUD CHEQUERAS"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.checkbooksgeneration.b4496.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4496"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4496"
+          },
+          "jobName": {
+            "S": "SOLICITUD MASIVA DE CHEQUERAS DE INVENTARIO"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.checkbooksgeneration.b4497.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4497"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4497"
+          },
+          "jobName": {
+            "S": "ACTUALIZAR STOCK DE CHEQUERAS ERRADAS"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.depurationhistorical.b4500.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": true
+              },
+              "exportFilesList": {
+                "L": [
+                  {
+                    "M": {
+                      "exportFile": {
+                        "M": {
+                          "database": {
+                            "S": "cob_ahorros"
+                          },
+                          "formatOptions": {
+                            "M": {
+                              "writeHeader": {
+                                "BOOL": true
+                              }
+                            }
+                          },
+                          "name": {
+                            "S": "backup_his_lavado_activos_${CLOSURE_DATE:0:4}${CLOSURE_DATE:5:7}${CLOSURE_DATE:8:10}_${SYSTEM_TIMESTAMP:11:13}${SYSTEM_TIMESTAMP:14:16}"
+                          },
+                          "table": {
+                            "S": "rep_HISLAVADO_ACT"
+                          },
+                          "type": {
+                            "S": "txt"
+                          }
+                        }
+                      },
+                      "outputFileDirectory": {
+                        "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-outputfiledirectory-%accountId%"
+                      }
+                    }
+                  }
+                ]
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4500"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4500"
+          },
+          "jobName": {
+            "S": "DEPURACION DE AUDITORIA LAVADO ACTIVOS HISTORICOS"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.depurationhistorical.b4508.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4508"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4508"
+          },
+          "jobName": {
+            "S": "DEPURACION DE AUDITORIA GMF MOVIMIENTOS Y BLOQUEOS HISTORICOS"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.transactionsendgmfreport.b4501.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4501"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4501"
+          },
+          "jobName": {
+            "S": "Gmf Consolidated Report"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.transactionsgmfreception.b4502.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4502"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4502"
+          },
+          "jobName": {
+            "S": "Gmf Validation of Uploaded Documents"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.transactionsgmfreception.b4503.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4503"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4503"
+          },
+          "jobName": {
+            "S": "Report GMF Validation Errors"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.transactionsgmfreception.b4504.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4504"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4504"
+          },
+          "jobName": {
+            "S": "Generate GMF Transactions Universe"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.transactionsgmfreception.b4505.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4505"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4505"
+          },
+          "jobName": {
+            "S": "Processing GMF Transactions"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.transactionsgmfreception.b4506.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4506"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4506"
+          },
+          "jobName": {
+            "S": "GMF Transaction Response Report"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "configuration": {
+            "M": {
+              "computeEnvironment": {
+                "S": "%BatchComputeEnvironment%"
+              },
+              "computeEnvironmentQueue": {
+                "S": "%BatchComputeEnvironmentQueue%"
+              },
+              "databaseTarget": {
+                "S": "master"
+              },
+              "entryPoint": {
+                "S": "com.cobis.cloud.demanddeposits.aws.batch.transactionsgmfreception.b4507.JobDefinition"
+              },
+              "executableFileDirectory": {
+                "S": "s3://%environmentId%-ddaccounts-%tenantId%-batch-executablefiledirectory-%accountId%"
+              },
+              "executableFileName": {
+                "S": "cobis-ddaccounts-serverless-service-batch.jar"
+              },
+              "exportFiles": {
+                "BOOL": false
+              },
+              "importFiles": {
+                "BOOL": false
+              },
+              "enable": {
+                "BOOL": true
+              },
+              "jobDefinition": {
+                "S": "%environmentId%-cobis-demand_deposits-job-definition-4507"
+              },
+              "logLevel": {
+                "S": "ERROR"
+              },
+              "reprocessable": {
+                "BOOL": true
+              }
+            }
+          },
+          "jobId": {
+            "S": "4507"
+          },
+          "jobName": {
+            "S": "GMF Move History"
+          }
+        }
+      }
+    }
+  ]
+}
