@@ -25,7 +25,6 @@ const score = (dices) => {
         if (n == 1) score += diff * 100;
         if (n == 5) score += diff * 50;
 
-
     }
 
     return score;
