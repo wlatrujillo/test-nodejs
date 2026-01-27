@@ -1,4 +1,4 @@
-export function validParentheses(parens) {
+const validParentheses = (parens) => {
     // your code here ..
     let stack = [];
     let array = parens.split('');
@@ -15,3 +15,27 @@ export function validParentheses(parens) {
 
     return stack.length == 0 ? true : false;
 }
+
+const validParentheses2 = (str) => {
+
+    while (str.includes("()")) {
+        str = str.replace("()", "");
+    }
+
+    return str.length == 0;
+}
+
+const validParentheses3 = (str) => {
+
+    let open = 0, close = 0;
+
+    for(const c of str){
+        c == '(' ? open++ : close++ ;        
+    }
+
+    return open - close == 0;
+
+}
+
+
+export { validParentheses, validParentheses2, validParentheses3 }

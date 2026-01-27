@@ -132,6 +132,10 @@
         "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:Package}"
     },
     {
+        "parameterKey": "PrivateBalancer",
+        "parameterValue": "true"
+    },
+    {
         "parameterKey": "Project",
         "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:Project}"
     },
