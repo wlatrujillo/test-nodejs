@@ -1,234 +1,198 @@
 [
-                {
-                    "parameterKey": "AWSBatchServiceRole",
-                    "parameterValue": "arn:aws:iam::${AWS_DEFAULT_ACCOUNT}:role/${BASE_ENVIRONMENT_ID}-batch-compute-service-role"
-                },
-                {
-                    "parameterKey": "AllowedDomains",
-                    "parameterValue": "${allowedDomains}"
-                },
-                {
-                    "parameterKey": "ApiGatewayType",
-                    "parameterValue": "REGIONAL"
-                },
-                {
-                    "parameterKey": "AwsAccountIdToDeploy",
-                    "parameterValue": "${AWS_DEFAULT_ACCOUNT}"
-                },
-                {
-                    "parameterKey": "BankingServicesDocumentsCancellationPSTLambdaConfiguration",
-                    "parameterValue": "2048:0:0:0:0:0:TRACE:19"
-                },
-                {
-                    "parameterKey": "BankingServicesDocumentsPSTByIdentifierLambdaConfiguration",
-                    "parameterValue": "2048:0:0:0:0:0:TRACE:19"
-                },
-                {
-                    "parameterKey": "BankingServicesDocumentsPSTLambdaConfiguration",
-                    "parameterValue": "2048:0:0:0:0:0:TRACE:19"
-                },
-                {
-                    "parameterKey": "BankingServicesDocumentsPrintRequestPSTLambdaConfiguration",
-                    "parameterValue": "2048:0:0:0:0:0:TRACE:19"
-                },
-                {
-                    "parameterKey": "BankingServicesDocumentsVoidPSTLambdaConfiguration",
-                    "parameterValue": "2048:0:0:0:0:0:TRACE:19"
-                },
-                {
-                    "parameterKey": "BankingServicesExecutorConfiguration",
-                    "parameterValue": "2048:0:0:0:0:0:TRACE:19"
-                },
-                {
-                    "parameterKey": "BankingServicesIntegrationExecutorLambdaConfiguration",
-                    "parameterValue": "2048:0:0:0:0:0:TRACE"
-                },
-                {
-                    "parameterKey": "BatchComputeEnvironment",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:DdaComputeEnvironmentName}"
-                },
-                {
-                    "parameterKey": "BatchComputeEnvironmentQueue",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:DdaComputeEnvironmentQueueName}"
-                },
-                {
-                    "parameterKey": "DBConnectionExpirationTime",
-                    "parameterValue": 720
-                },
-                {
-                    "parameterKey": "DockerEcrRepositoryUrl",
-                    "parameterValue": "${AWS_DEFAULT_ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/${CONTAINER_NAME}"
-                },
-                {
-                    "parameterKey": "DockerTag",
-                    "parameterValue": "${CONTAINER_VERSION}"
-                },
-                {
-                    "parameterKey": "EcsTaskExecutionRole",
-                    "parameterValue": "arn:aws:iam::${AWS_DEFAULT_ACCOUNT}:role/${BASE_ENVIRONMENT_ID}-batch-task-execution-role"
-                },
-                {
-                    "parameterKey": "EnvironmentId",
-                    "parameterValue": "${ENVIRONMENT_ID}"
-                },
-                {
-                    "parameterKey": "EnvironmentIdBase",
-                    "parameterValue": "${BASE_ENVIRONMENT_ID}"
-                },
-                {
-                    "parameterKey": "EnvironmentIdBaseAutorizer",
-                    "parameterValue": "${BASE_ENVIRONMENT_ID}"
-                },
-                {
-                    "parameterKey": "EnvironmentIdBaseFront",
-                    "parameterValue": "${BASE_ENVIRONMENT_ID}"
-                },
-                {
-                    "parameterKey": "EnvironmentType",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:EnvironmentType}"
-                },
-                {
-                    "parameterKey": "ExecuteAPIVPCEndpointId",
-                    "parameterValue": "NA"
-                },
-                {
-                    "parameterKey": "ExternalsVPCEndpointIds",
-                    "parameterValue": "NA"
-                },
-                {
-                    "parameterKey": "InfrastructureEventBusArn",
-                    "parameterValue": "arn:aws:events:${REGION}:${AWS_DEFAULT_ACCOUNT}:event-bus/${BASE_ENVIRONMENT_ID}-infrastructure-bus"
-                },
-                {
-                    "parameterKey": "IntegrationEventBus",
-                    "parameterValue": "${BASE_ENVIRONMENT_ID}-infrastructure-bus"
-                },
-                {
-                    "parameterKey": "JavaExecImageTag",
-                    "parameterValue": "java8"
-                },
-                {
-                    "parameterKey": "LambdaAliasBeta",
-                    "parameterValue": "beta"
-                },
-                {
-                    "parameterKey": "LambdaAliasProduction",
-                    "parameterValue": "production"
-                },
-                {
-                    "parameterKey": "LambdaAuthorizer",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-cobis-core-auth:LambdaAuthorizerName}"
-                },
-                {
-                    "parameterKey": "LambdaBankingServicesFunctionalApprovalLogLevel",
-                    "parameterValue": "TRACE"
-                },
-                {
-                    "parameterKey": "LambdaBankingServicesFunctionalApprovalMemory",
-                    "parameterValue": "2048"
-                },
-                {
-                    "parameterKey": "LogRetentionDays",
-                    "parameterValue": "${logRetentionDays}"
-                },
-                {
-                    "parameterKey": "LoggingBucket",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:AccessLoggingBucketName}"
-                },
-                {
-                    "parameterKey": "LoggingLevel",
-                    "parameterValue": "INFO"
-                },
-                {
-                    "parameterKey": "Module",
-                    "parameterValue": "BankingServices"
-                },
-                {
-                    "parameterKey": "OfficialsUserPoolJWKS",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-cobis-core-auth:OfficialsUserPoolJWKS}"
-                },
-                {
-                    "parameterKey": "Organization",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:Organization}"
-                },
-                {
-                    "parameterKey": "Package",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:Package}"
-                },
-                {
-                    "parameterKey": "Project",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:Project}"
-                },
-                {
-                    "parameterKey": "RegionToDeploy",
-                    "parameterValue": "${REGION}"
-                },
-                {
-                    "parameterKey": "ReplicationConfigurationActivated",
-                    "parameterValue": "false"
-                },
-                {
-                    "parameterKey": "ReplicationDestinationEnvironmentId",
-                    "parameterValue": "${DR_ENVIRONMENT}"
-                },
-                {
-                    "parameterKey": "SecretName",
-                    "parameterValue": "arn:aws:secretsmanager:${REGION}:${AWS_DEFAULT_ACCOUNT}:secret:/prd/BankingServices/database/credentials-fnK6X0"
-                },
-                {
-                    "parameterKey": "SecretsManagerCacheExpirationTime",
-                    "parameterValue": "120"
-                },
-                {
-                    "parameterKey": "SecurityGroupIds",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:GeneralPurposeBackendSecurityGroupId}"
-                },
-                {
-                    "parameterKey": "SharedResourcesAccount",
-                    "parameterValue": "${AWS_SHARED_ACCOUNT}"
-                },
-                {
-                    "parameterKey": "StageMainVersionName",
-                    "parameterValue": "v1"
-                },
-                {
-                    "parameterKey": "StageName",
-                    "parameterValue": "v1"
-                },
-                {
-                    "parameterKey": "SubnetIds",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:GeneralPurposeBackendSubnetIds}"
-                },
-                {
-                    "parameterKey": "SystemPoolId",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-cobis-core-auth:SystemsUserPoolId}"
-                },
-                {
-                    "parameterKey": "SystemsUserPoolJWKS",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-cobis-core-auth:SystemsUserPoolJWKS}"
-                },
-                {
-                    "parameterKey": "TenantId",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:TenantId}"
-                },
-                {
-                    "parameterKey": "TimeZone",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:TimeZone}"
-                },
-                {
-                    "parameterKey": "UpgradeToDockerRunOnlyOnce",
-                    "parameterValue": "false"
-                },
-                {
-                    "parameterKey": "UserPoolId",
-                    "parameterValue": "${${BASE_ENVIRONMENT_ID}-cobis-core-auth:OfficialsUserPoolId}"
-                },
-                {
-                    "parameterKey": "WebACLArn",
-                    "parameterValue": "${operations-base:Wafv2PublicWebAclArn}"
-                },
-                {
-                    "parameterKey": "WithWebACL",
-                    "parameterValue": "true"
-                }
-            ]
+  {
+    "parameterKey": "Account",
+    "parameterValue": "${AWS_DEFAULT_ACCOUNT}"
+  },
+  {
+    "parameterKey": "ApiKeyIdDemandDeposits",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-ddaccounts:DemandDepositsApiKeyId}"
+  },
+  {
+    "parameterKey": "ApiKeyIdFinancial",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-ddaccounts:DemandDepositsApiKeyId}"
+  },
+  {
+    "parameterKey": "ApiKeyIdInfrastructure",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-ddaccounts:DemandDepositsApiKeyId}"
+  },
+  {
+    "parameterKey": "ApiKeyIdCustomers",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-ddaccounts:DemandDepositsApiKeyId}"
+  },
+  {
+    "parameterKey": "AwsAccountIdToDeploy",
+    "parameterValue": "${AWS_DEFAULT_ACCOUNT}"
+  },
+  {
+    "parameterKey": "Cluster",
+    "parameterValue": "${BASE_ENVIRONMENT_ID}-cobis-gp-ecs-cluster"
+  },
+  {
+    "parameterKey": "DatabaseDemandDeposits",
+    "parameterValue": "cob_ahorros"
+  },
+  {
+    "parameterKey": "DatabaseFinancial",
+    "parameterValue": "cob_remesas"
+  },
+  {
+    "parameterKey": "DatabaseInfrastructure",
+    "parameterValue": "cobis"
+  },
+  {
+    "parameterKey": "DatabaseCustomers",
+    "parameterValue": "cobis"
+  },
+  {
+    "parameterKey": "DaysRetention",
+    "parameterValue": 3
+  },
+  {
+    "parameterKey": "Domains",
+    "parameterValue": "Infrastructure,DemandDeposits,Financial,Customers"
+  },
+  {
+    "parameterKey": "ECSClusterARN",
+    "parameterValue": "arn:aws:ecs:${AWS_DEFAULT_REGION}:${AWS_DEFAULT_ACCOUNT}:cluster/${BASE_ENVIRONMENT_ID}-cobis-gp-ecs-cluster"
+  },
+  {
+    "parameterKey": "EFSAccessPointId",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:EFSAccessPointId}"
+  },
+  {
+    "parameterKey": "EFSId",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:EFSId}"
+  },
+  {
+    "parameterKey": "EnvironmentId",
+    "parameterValue": "${ENVIRONMENT_ID}"
+  },
+  {
+    "parameterKey": "EnvironmentType",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:EnvironmentType}"
+  },
+  {
+    "parameterKey": "ExecutorDemandDeposits",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-ddaccounts:DemandDepositsExecutorAPIEndpoint}/demand-deposits/executor"
+  },
+  {
+    "parameterKey": "ExecutorFinancial",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-ddaccounts:DemandDepositsExecutorAPIEndpoint}/demand-deposits/executor"
+  },
+  {
+    "parameterKey": "ExecutorInfrastructure",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-infra-serverless-service:InfrastructureExecutorAPIEndpoint}/infrastructure/executor"
+  },
+  {
+    "parameterKey": "ExecutorCustomers",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-customers:CustomersExecutorAPIEndpoint}"
+  },
+  {
+    "parameterKey": "LoggingBucket",
+    "parameterValue": "${BASE_ENVIRONMENT_ID}-baseplatform-serveraccesslogs-${AWS_DEFAULT_ACCOUNT}"
+  },
+  {
+    "parameterKey": "Module",
+    "parameterValue": "${Module}"
+  },
+  {
+    "parameterKey": "Package",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:Package}"
+  },
+  {
+    "parameterKey": "Project",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:Project}"
+  },
+  {
+    "parameterKey": "Region",
+    "parameterValue": "${AWS_DEFAULT_REGION}"
+  },
+  {
+    "parameterKey": "RegionToDeploy",
+    "parameterValue": "${AWS_DEFAULT_REGION}"
+  },
+  {
+    "parameterKey": "SSLCertificateARN",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:ArnPublicCertificateGeneralPurpose}"
+  },
+  {
+    "parameterKey": "SecurityGroupIds",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:MicroReportSecurityGroupId}"
+  },
+  {
+    "parameterKey": "ServiceName",
+    "parameterValue": "${BASE_ENVIRONMENT_ID}-${Module}-report-service"
+  },
+  {
+    "parameterKey": "SessionTableName",
+    "parameterValue": "${BASE_ENVIRONMENT_ID}-mfe-session"
+  },
+  {
+    "parameterKey": "SubnetIDs",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:GeneralPurposeAPIsAndFrontendPublicSubnetIds}"
+  },
+  {
+    "parameterKey": "taskDefinitionCpu",
+    "parameterValue": "256"
+  },
+  {
+    "parameterKey": "taskDefinitionMemory",
+    "parameterValue": "1024"
+  },
+  {
+    "parameterKey": "TenantId",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:TenantId}"
+  },
+  {
+    "parameterKey": "Version",
+    "parameterValue": "latest"
+  },
+  {
+    "parameterKey": "VpcCIDRBlock",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:VpcCIDRBlock}"
+  },
+  {
+    "parameterKey": "ecrName",
+    "parameterValue": "${ecrRepositoryName}"
+  },
+  {
+    "parameterKey": "ecrURL",
+    "parameterValue": "${AWS_DEFAULT_ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/${ecrRepositoryName}:${CONTAINER_VERSION}"
+  },
+  {
+    "parameterKey": "ecsTaskContainerName",
+    "parameterValue": "${BASE_ENVIRONMENT_ID}-${Module}-report-tc"
+  },
+  {
+    "parameterKey": "ecsTaskFamilyName",
+    "parameterValue": "${BASE_ENVIRONMENT_ID}-${Module}-report-td"
+  },
+  {
+    "parameterKey": "ecsVPC",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:VPCId}"
+  },
+  {
+    "parameterKey": "httpPort",
+    "parameterValue": 453
+  },
+  {
+    "parameterKey": "httpsPort",
+    "parameterValue": 7004
+  },
+  {
+    "parameterKey": "loadBalancerARN",
+    "parameterValue": "${${BASE_ENVIRONMENT_ID}-BasePlatform:LoadBalancerPrivateARN}"
+  },
+  {
+    "parameterKey": "projectExposedPort",
+    "parameterValue": 7004
+  },
+  {
+    "parameterKey": "projectListeningPort",
+    "parameterValue": 7004
+  },
+  {
+    "parameterKey": "targetGroupName",
+    "parameterValue": "${BASE_ENVIRONMENT_ID}-${Module}-report-tg"
+  }
+]
