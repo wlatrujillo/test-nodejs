@@ -1,6 +1,6 @@
 import assert from "node:assert";
 import { describe, it } from "node:test";
-import { validParentheses, validParentheses2, validParentheses3 } from "./validparentheses.js";
+import { validParentheses3 } from "./validparentheses.js";
 
 
 

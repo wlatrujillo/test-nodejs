@@ -30,10 +30,11 @@ const validParentheses3 = (str) => {
     let open = 0, close = 0;
 
     for(const c of str){
-        c == '(' ? open++ : close++ ;        
+        c == '(' ? open++ : close++ ;     
+        if(close>open) return false;   
     }
 
-    return open - close == 0;
+    return open == close;
 
 }
 
